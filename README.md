@@ -2,7 +2,7 @@
 
 # docker-vpt
 
-Docker image with [VPT](https://github.com/Vizgen/vizgen-postprocessing) (The Vizgen Post-processing Tool) version 1.2.2 and [cellpose](https://github.com/MouseLand/cellpose) version 2.2.3
+Docker image with [VPT](https://github.com/Vizgen/vizgen-postprocessing) (The Vizgen Post-processing Tool) version 1.3.0 and [cellpose](https://github.com/MouseLand/cellpose) version 2.2.3
 
 To build this container you can use the following command:
 
@@ -13,7 +13,12 @@ docker build -t CONTAINER_NAME .
 The container is stored on Quay.io and you can get it via:
 
 ```bash
-docker pull quay.io/bgruening/vpt:1.2.2
+docker pull quay.io/bgruening/vpt:1.3.0
 ```
 
+to analyze your data with the container:
+
+```bash
+docker run -it -v ./your_local_directory/:/directory_on_container CONTAINER_NAME:tag bash
+```
 
