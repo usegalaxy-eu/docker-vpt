@@ -20,8 +20,13 @@ dependencies:
   - libzlib=1.3.1
   - ncurses=6.5
   - openssl=3.4.1
+  - vpt=1.3.0
+  - vpt-core=1.2.0
+  - vpt-plugin-cellpose2=1.0.1
+  - vpt-segmentation-packing=1.0.1
+  - onnx=1.14.1
   - pip=25.0.1
-  - python>=3.10
+  - python=3.10.13
   - readline=8.2
   - setuptools=75.8.2
   - tk=8.6.13
@@ -34,7 +39,7 @@ dependencies:
       - absl-py==2.1.0
       - affine==2.4.0
       - aiobotocore==2.21.0
-      - anndata==0.12.10
+      - anndata==0.10.9
       - astunparse==1.6.3
       - blosc2==2.7.1
       - boto3==1.37.1
@@ -109,7 +114,6 @@ dependencies:
       - nvidia-nvtx-cu12==12.4.127
       - oauthlib==3.2.2
       - ome-zarr==0.13.0
-      - onnx==1.14.1
       - opencv-python-headless==4.11.0.86
       - openvino==2025.0.0
       - openvino-telemetry==2025.0.1
@@ -154,16 +158,12 @@ dependencies:
       - torch>=2.0.0
       - triton>=2.0.0
       - urllib3==1.26.20
-      - vpt==1.3.0
-      - vpt-core==1.2.0
-      - vpt-plugin-cellpose2==1.0.1
-      - vpt-segmentation-packing==1.0.1
       - werkzeug==3.1.3
       - wrapt-timeout-decorator==1.5.1
       - xarray-spatial==0.4.0
       - zipp==3.21.0
       - safetensors==0.6.2
-      - rioxarray==0.20.0
+      - rioxarray>=0.20.0
       - spatialdata==0.7.2
       - spatialdata-io==0.6.0
 prefix: /home/nilchia/miniconda3/envs/vpt_cp2
