@@ -21,7 +21,7 @@ dependencies:
   - ncurses=6.5
   - openssl=3.4.1
   - pip=25.0.1
-  - python=3.10.12
+  - python>=3.10
   - readline=8.2
   - setuptools=75.8.2
   - tk=8.6.13
@@ -34,7 +34,7 @@ dependencies:
       - absl-py==2.1.0
       - affine==2.4.0
       - aiobotocore==2.21.0
-      - anndata==0.11.3
+      - anndata==0.12.10
       - astunparse==1.6.3
       - blosc2==2.7.1
       - boto3==1.37.1
@@ -69,8 +69,6 @@ dependencies:
       - idna==3.10
       - imagecodecs==2024.12.30
       - kaleido==0.1.0
-      - keras==2.9.0
-      - keras-preprocessing==1.1.2
       - lib-detect-testenv==2.0.8
       - libclang==18.1.1
       - lit==18.1.8
@@ -84,7 +82,7 @@ dependencies:
       - ndindex==1.9.2
       - numba==0.61.0
       - numexpr==2.10.2
-      - numpy==1.24.3
+      - numpy>=1.26,<2.0
       - nvidia-cublas-cu11==11.10.3.66
       - nvidia-cublas-cu12==12.4.5.8
       - nvidia-cuda-cupti-cu11==11.7.101
@@ -110,20 +108,20 @@ dependencies:
       - nvidia-nvtx-cu11==11.7.91
       - nvidia-nvtx-cu12==12.4.127
       - oauthlib==3.2.2
-      - ome-zarr==0.10.3
+      - ome-zarr==0.13.0
       - onnx==1.14.1
       - opencv-python-headless==4.11.0.86
       - openvino==2025.0.0
       - openvino-telemetry==2025.0.1
       - opt-einsum==3.4.0
-      - pandas==2.0.3
+      - pandas==2.3.3
       - pexpect==4.9.0
       - pretty-html-table==0.9.16
       - proto-plus==1.26.0
       - protobuf==5.29.3
       - ptyprocess==0.7.0
       - py-cpuinfo==9.0.0
-      - pyarrow==13.0.0
+      - pyarrow>=13.0.0
       - pyasn1==0.6.1
       - pyasn1-modules==0.4.1
       - pyclustering==0.10.1.2
@@ -138,27 +136,23 @@ dependencies:
       - pyvips==2.2.3
       - pyyaml==6.0.2
       - qtpy==2.4.3
-      - rasterio==1.3.5.post1
+      - rasterio>=1.3.5.post1
       - requests-oauthlib==2.0.0
       - roifile==2025.2.20
       - rsa==4.9
       - s3fs==2024.2.0
       - s3transfer==0.11.3
-      - scanpy==1.9.3
+      - scanpy>=1.10.0
       - scipy==1.13.1
       - six==1.17.0
       - snuggs==1.4.7
-      - stardist==0.8.3
+      - stardist>=0.8.3
       - superqt==0.7.1
       - sympy==1.13.1
       - tables==3.10.1
-      - tensorboard-data-server==0.6.1
-      - tensorboard-plugin-wit==1.8.1
-      - tensorflow-estimator==2.9.0
-      - tensorflow-io-gcs-filesystem==0.31.0
       - termcolor==2.5.0
-      - torch==2.0.0
-      - triton==2.0.0
+      - torch>=2.0.0
+      - triton>=2.0.0
       - urllib3==1.26.20
       - vpt==1.3.0
       - vpt-core==1.2.0
@@ -169,4 +163,7 @@ dependencies:
       - xarray-spatial==0.4.0
       - zipp==3.21.0
       - safetensors==0.6.2
+      - rioxarray==0.20.0
+      - spatialdata==0.7.2
+      - spatialdata-io==0.6.0
 prefix: /home/nilchia/miniconda3/envs/vpt_cp2
