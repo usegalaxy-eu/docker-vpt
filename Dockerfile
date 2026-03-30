@@ -25,13 +25,16 @@ RUN apt-get update && \
 RUN --mount=type=cache,target=/root/.cache/pip \
     --mount=type=cache,target=/root/.cache/uv \
     python -m pip install --no-cache-dir --upgrade pip uv && \
-    uv venv "$VENV_PATH" --python 3.12 && \
-    uv pip install --python "$VENV_PATH/bin/python" --upgrade \
+    uv venv "$VENV_PATH" --python 3.12
+
+RUN ls . && uv pip install --refresh-package vpt-plugin-cellpose2 \
+        --python "$VENV_PATH/bin/python" --upgrade \
         --extra-index-url https://download.pytorch.org/whl/cpu \
         "torch==2.4.1+cpu" \
         "torchvision==0.19.1+cpu" \
+        "safetensors" \
         "vpt[all] @ git+https://github.com/bgruening/vizgen-postprocessing.git@refs/heads/py312"
-
+        
 FROM python:3.12-slim-bookworm AS runtime
 
 LABEL maintainer="Amirhossein N. Nilchi <nilchia@informatik.uni-freiburg.de>"
