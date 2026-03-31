@@ -33,8 +33,11 @@ RUN ls . && uv pip install --refresh-package vpt-plugin-cellpose2 \
         "torch==2.4.1+cpu" \
         "torchvision==0.19.1+cpu" \
         "safetensors" \
-        "vpt[all] @ git+https://github.com/bgruening/vizgen-postprocessing.git@refs/heads/py312"
-        
+        "vpt[all] @ git+https://github.com/bgruening/vizgen-postprocessing.git@refs/heads/py312" \
+        "spatialdata>=0.7.2" \
+        "spatialdata-io>=0.6.0" \
+        "anndata>=0.12.10"
+
 FROM python:3.12-slim-bookworm AS runtime
 
 LABEL maintainer="Amirhossein N. Nilchi <nilchia@informatik.uni-freiburg.de>"
