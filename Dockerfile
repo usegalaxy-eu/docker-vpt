@@ -38,6 +38,7 @@ RUN ls . && uv pip install --refresh-package vpt-plugin-cellpose2 \
         "spatialdata>=0.7.2" \
         "spatialdata-io>=0.6.0" \
         "anndata>=0.12.10" \
+        "scanpy>=1.12" \
         "ome-zarr<=0.13.0" \
         "rioxarray==0.20.0"
 
