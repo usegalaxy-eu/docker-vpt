@@ -30,6 +30,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 RUN ls . && uv pip install --refresh-package vpt-plugin-cellpose2 \
         --python "$VENV_PATH/bin/python" --upgrade \
         --extra-index-url https://download.pytorch.org/whl/cpu \
+        --index-strategy unsafe-best-match \
         "torch==2.4.1+cpu" \
         "torchvision==0.19.1+cpu" \
         "safetensors" \
