@@ -37,7 +37,9 @@ RUN ls . && uv pip install --refresh-package vpt-plugin-cellpose2 \
         "vpt[all] @ git+https://github.com/bgruening/vizgen-postprocessing.git@refs/heads/py312" \
         "spatialdata>=0.7.2" \
         "spatialdata-io>=0.6.0" \
-        "anndata>=0.12.10"
+        "anndata>=0.12.10" \
+        "ome-zarr<=0.13.0" \
+        "rioxarray==0.20.0"
 
 FROM python:3.12-slim-bookworm AS runtime
 
@@ -54,7 +56,9 @@ RUN apt-get update && \
         libsm6 \
         libvips42 \
         libxext6 \
-        libxrender1 && \
+        libxrender1 \
+        zip \
+        unzip && \
     rm -rf /var/lib/apt/lists/*
 
 COPY --from=deps /opt/vpt-venv /opt/vpt-venv
