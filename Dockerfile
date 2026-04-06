@@ -40,7 +40,8 @@ RUN ls . && uv pip install --refresh-package vpt-plugin-cellpose2 \
         "anndata>=0.12.10" \
         "scanpy>=1.12" \
         "ome-zarr<=0.13.0" \
-        "rioxarray==0.20.0"
+        "rioxarray==0.20.0" \
+        "geopandas>=1.1.3"
 
 FROM python:3.12-slim-bookworm AS runtime
 
