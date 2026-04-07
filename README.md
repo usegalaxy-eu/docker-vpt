@@ -4,7 +4,7 @@
 
 # docker-vpt
 
-Docker image with [VPT](https://github.com/Vizgen/vizgen-postprocessing) (The Vizgen Post-processing Tool) version 1.3.0 and [cellpose](https://github.com/MouseLand/cellpose) version 2.2.3
+Docker image with [VPT](https://github.com/Vizgen/vizgen-postprocessing) (The Vizgen Post-processing Tool) from the `py312` branch and the Cellpose 2 plugin stack.
 
 ## How to build the container
 
@@ -21,7 +21,7 @@ docker build -t CONTAINER_NAME .
 The container is stored on Quay.io and you can get it via:
 
 ```bash
-docker pull quay.io/bgruening/vpt:1.3.0-1
+docker pull quay.io/bgruening/vpt:1.3.0-3
 ```
 
 ## How to use the container
@@ -34,7 +34,7 @@ docker run -it -v ./your_local_directory/:/directory_on_container CONTAINER_NAME
 
 ## How to install vpt via conda environment
 
-To use vpt in a conda environment you can use the "vpt_cp2_env.yml" file and then install vpt via:
+The old conda environment file is kept for reference only. The supported container build now uses Python 3.12 and `uv` to install VPT from the GitHub `py312` branch.
 
 ```bash
 conda env create -n ENVIRONMENT_NAME -f vpt_cp2_env.yml -y
